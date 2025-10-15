@@ -50,18 +50,26 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            set -e
+
             mkdir -p ~/hohoho_tmp
             cd ~/hohoho_tmp
             tar -xzf build.tar.gz
             rm build.tar.gz
 
-            # Backup old build
-            if [ -d ~/hohoho ]; then
-              rm -rf ~/hohoho_old
-              mv ~/hohoho ~/hohoho_old
+            echo "📦 Extracted new build."
+
+            # Backup old version
+            if [ -d /var/www/hohoho ]; then
+              sudo rm -rf /var/www/hohoho_old
+              sudo mv /var/www/hohoho /var/www/hohoho_old
             fi
 
             # Move new build into place
-            mv build ~/hohoho
+            sudo mv build /var/www/hohoho
+            sudo chown -R www-data:www-data /var/www/hohoho
 
-            echo "✅ HoHoHo build deployed to ~/hohoho"
+            # Reload Nginx
+            sudo systemctl reload nginx
+
+            echo "✅ Deployed new build to /var/www/hohoho and reloaded Nginx."
