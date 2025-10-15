@@ -29,7 +29,7 @@ function GuidelinesPage() {
             <NavBar showLogout={isLoggedIn} delay={500} />
             <IntroGuidelines separator="branch2" />
             <Deadlines separator="branch1" language={currentLanguage} />
-            <Criteria separator="lights" />
+            <Criteria separator="branch1" />
             <CallToAction />
             <Footer delay={500} />
         </>

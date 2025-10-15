@@ -14,7 +14,8 @@ function Footer({ delay = 4000 }: FooterProp) {
     if (!isVisible) {
         return null;
     }
-    const imageSrc = `http://localhost:3000/images/footer/snowman.png`
+
+    const imageSrc = `https://hohoho.danilocangucu.net/images/footer/snowman.png`
 
     return (
         <footer className="footer border-top margin-top--footer">

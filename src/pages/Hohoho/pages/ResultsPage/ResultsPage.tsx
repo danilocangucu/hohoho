@@ -24,7 +24,7 @@ function ResultsPage() {
         <>
             <TopBar delay={500} />
             <NavBar showLogout={isLoggedIn} delay={500} />
-            <IntroResults separator='lights' />
+            <IntroResults separator='branch1' />
             <Awardee separator='branch2' />
             {/* <Statistics separator='branch1' /> */}
             <Footer delay={500} />
