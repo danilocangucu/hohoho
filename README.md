@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Ho! Ho! Ho!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A festive website built as an open call for Christmas 2024. The winner received a free custom website created by me, Danilo Canguçu.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This project features:
 
-### `npm start`
+- Animated snowfall using **GSAP**
+- Smooth page transitions and loading animations
+- Playful, festive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Built with **Next.js**, **React**, **Redux**, **React Hook Form**, **Chart.js**, **react-i18next**, **PostgreSQL**, and **AWS**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project is archived but still interactive.
 
-### `npm test`
+## Local Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project locally:
 
-### `npm run build`
+```bash
+git clone <repo-url>
+cd hohoho
+npm install --legacy-peer-deps
+npm run dev
+````
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project is deployed automatically to an EC2 instance via **GitHub Actions** on every push to `main`.
 
-### `npm run eject`
+* **Build and archive** the React app
+* **Copy** the build to EC2
+* **Extract**, backup old version, move new build
+* **Reload Nginx** to serve the updated site
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Secrets required for deployment:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* `EC2_HOST`
+* `EC2_USER`
+* `EC2_SSH_KEY`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Status
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ended in December 2024. All rights reserved © 2024 Danilo Canguçu.
